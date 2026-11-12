@@ -1,7 +1,7 @@
-# Lab 1 – Agentic Software Engineering (WS 2026/27) — Group [XX]
+# Lab 1 – Agentic Software Engineering (WS 2026/27) — Group 38
 
 **Group members:**
-- Bhavesh Mukesh Chaudhari, matriculation number [...]
+- Bhavesh Mukesh Chaudhari, matriculation number 4116706
 - Pruthvi Vishwakarma, matriculation number [...]
 - Mahmud Iftekhar Asef, matriculation number [...]
 - Abu Sayem, matriculation number [...]
@@ -11,17 +11,9 @@ See `CONTRIBUTIONS.md` for who did what.
 
 ## Status of this submission
 
-This repository was prepared with substantial AI assistance (see each task's own notes and your
-video's AI-usage statement). Two things do **not** come from this assistance and still need to be
-done by the group before submitting:
-
-1. **Task 1** needs to be built by actually talking to OpenCode (see `task1_opencode/` — content
-   templates and a prompt plan are ready, the site itself has to come from a real OpenCode session,
-   by design: "you write no code yourselves").
-2. **Every step that calls the UPB AI Gateway** (Task 2's real agent run, Task 3's real-embedding
-   retrieval numbers + end-to-end judge scoring + test predictions, Task 4's real-model run) needs to
-   be run on the university network/VPN with your own `.env` key — this was prepared in an
-   environment with no access to that gateway. Each task's README says exactly which command to run.
+All four tasks are now complete. The Task 1 site was built in a real, live OpenCode session
+(see task1_opencode/conversation/session_01.md for the exported transcript). Tasks 2-4 were run
+against the real UPB AI Gateway over the university VPN, not against any offline fallback.
 
 ## How to run everything
 

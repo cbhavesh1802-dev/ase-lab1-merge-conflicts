@@ -3,7 +3,7 @@
 Fill in per person — short bullet list, specific enough that it's clear who can explain what in the
 video (the rubric requires every member to present a part they actually worked on).
 
-- **Bhavesh Mukesh Chaudhari:** [e.g. Task 1 content + OpenCode sessions 1-2; Task 4 containment tests]
+- **Bhavesh Mukesh Chaudhari:** Set up UPB AI Gateway access (VPN, certificate, API key) for the group; ran the live OpenCode session for Task 1 (site build, fixed an image-filename mismatch the agent caught itself); ran Tasks 2-4 against the real gateway; set up and pushed the GitHub repo.
 - **Pruthvi Vishwakarma:** [e.g. Task 2 rag.py chunking + embedding; Task 3 R2/R3 retrievers]
 - **Mahmud Iftekhar Asef:** [e.g. Task 1 OpenCode session 3; Task 3 evaluation + failure analysis]
 - **Abu Sayem:** [e.g. Task 4 tools.py + agent.py; video editing]
@@ -16,7 +16,4 @@ Note which AI tools were used, by whom, and for what — this also needs to go i
 
 - OpenCode (`openai.gpt-6-luna` via the UPB AI Gateway): built `task1_opencode/site/index.html`
   end to end, per Task 1's rules (no hand-written code).
-- [Name the assistant(s) used for Tasks 2-4, e.g. "Claude" / "GitHub Copilot" / "ChatGPT"] — used
-  for [drafting rag.py/agent.py/tools.py/the retrieval configs/etc.]. Reviewed and understood by
-  whoever presents that part, per the lab's AI-usage rule ("the AI wrote that part" is not an
-  explanation).
+- Claude -- used for drafting task2_own_agent/rag.py and agent.py, task3_rag/retrievers.py and configs.py, and task4_tools/tools.py and agent.py. Reviewed and understood by whoever presents that part, per the lab's AI-usage rule ("the AI wrote that part" is not an explanation).
