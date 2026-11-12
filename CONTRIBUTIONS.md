@@ -3,7 +3,7 @@
 Fill in per person — short bullet list, specific enough that it's clear who can explain what in the
 video (the rubric requires every member to present a part they actually worked on).
 
-- **Bhavesh Mukesh Chaudhari:** Set up UPB AI Gateway access (VPN, certificate, API key) for the group; ran the live OpenCode session for Task 1 (site build, fixed an image-filename mismatch the agent caught itself); ran Tasks 2-4 against the real gateway; set up and pushed the GitHub repo.
+- **Bhavesh Chaudhari:** Set up UPB AI Gateway access (VPN, certificate, API key) for the group; ran the live OpenCode session for Task 1 (site build, fixed an image-filename mismatch the agent caught itself); ran Tasks 2-4 against the real gateway; set up and pushed the GitHub repo.
 - **Pruthvi Vishwakarma:** [e.g. Task 2 rag.py chunking + embedding; Task 3 R2/R3 retrievers]
 - **Mahmud Iftekhar Asef:** [e.g. Task 1 OpenCode session 3; Task 3 evaluation + failure analysis]
 - **Abu Sayem:** [e.g. Task 4 tools.py + agent.py; video editing]

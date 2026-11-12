@@ -1,7 +1,7 @@
 # Lab 1 – Agentic Software Engineering (WS 2026/27) — Group 38
 
 **Group members:**
-- Bhavesh Mukesh Chaudhari, matriculation number 4116706
+- Bhavesh Chaudhari, matriculation number 4116706
 - Pruthvi Vishwakarma, matriculation number [...]
 - Mahmud Iftekhar Asef, matriculation number [...]
 - Abu Sayem, matriculation number [...]
