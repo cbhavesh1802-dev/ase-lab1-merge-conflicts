@@ -1,6 +1,6 @@
-# Mahmud
+# Asef
 
-<!-- Fill this in and put your picture into images/mahmud.jpg (or .png/.svg/.webp), ~400x400px. -->
+<!-- Fill this in and put your picture into images/asef.jpg (or .png/.svg/.webp), ~400x400px. -->
 
 ## Study background
 M.Sc. Computer Science, Paderborn University (started April 2026).
