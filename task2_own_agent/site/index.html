@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team The Merge Conflicts | Agentic SE Lab</title>
+  <script>
+    (() => {
+      let theme;
+      try {
+        theme = localStorage.getItem("upb-theme");
+      } catch (_) {}
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      --accent: #E4007C;
+      --accent-ink: #FFFFFF;
+    }
+
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #FFF8E7;
+      --text: #1D1D1F;
+      --muted: #5A5A5F;
+      --card: #FFFFFF;
+      --line: #E9DEC8;
+      --soft: #F4EBD8;
+      --shadow: 0 0.75rem 2rem rgb(62 47 25 / 8%);
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #14142B;
+      --text: #F4F1DE;
+      --muted: #B8B5A7;
+      --card: #1F1F3D;
+      --line: #383854;
+      --soft: #292944;
+      --shadow: 0 0.75rem 2rem rgb(0 0 0 / 20%);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 2rem;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      transition: background-color 180ms ease, color 180ms ease;
+    }
+
+    a { color: inherit; }
+
+    .shell {
+      width: min(100% - 3rem, 74rem);
+      margin-inline: auto;
+    }
+
+    .masthead {
+      position: relative;
+      overflow: hidden;
+      padding: 1.25rem 0 5rem;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse at 83% 10%, rgb(228 0 124 / 10%), transparent 34%),
+        radial-gradient(ellipse at 8% 90%, rgb(209 159 75 / 14%), transparent 32%);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .mark {
+      display: grid;
+      width: 2.2rem;
+      aspect-ratio: 1;
+      place-items: center;
+      border-radius: 0.75rem;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-size: 1rem;
+      font-weight: 900;
+      transform: rotate(-5deg);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .nav-actions a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .nav-actions a:hover { color: var(--accent); }
+
+    #theme-toggle {
+      display: inline-grid;
+      width: 2.75rem;
+      height: 2.75rem;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    #theme-toggle:focus-visible,
+    a:focus-visible {
+      outline: 0.2rem solid var(--accent);
+      outline-offset: 0.2rem;
+    }
+
+    .hero {
+      max-width: 52rem;
+      padding-top: 5.25rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin: 0 0 1rem;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 1.65rem;
+      height: 0.15rem;
+      background: currentColor;
+      content: "";
+    }
+
+    h1 {
+      max-width: 13ch;
+      margin: 0;
+      font-size: 2.5rem;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    .hero-copy {
+      max-width: 42rem;
+      margin: 1.25rem 0 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: 1.5rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      background: var(--card);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .hero-note strong { color: var(--text); }
+
+    main { padding-block: 4.5rem 5rem; }
+
+    section + section { margin-top: 5.5rem; }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1.65rem;
+    }
+
+    .section-heading h2,
+    #future-of-se h2 {
+      margin: 0;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading p {
+      max-width: 34rem;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .member-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: 1.15rem;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .avatar {
+      width: 8rem;
+      height: 8rem;
+      flex: 0 0 auto;
+      margin-bottom: 1.1rem;
+      border: 0.22rem solid var(--bg);
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px var(--line);
+    }
+
+    .member-card h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+
+    .study {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 650;
+    }
+
+    .bio {
+      margin: 0.9rem 0 1.2rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    .bio em { color: var(--text); }
+
+    .hot-take {
+      width: 100%;
+      margin-top: auto;
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.8rem;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .future-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.5rem, 5vw, 3.5rem);
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      background:
+        radial-gradient(ellipse at 100% 0%, rgb(228 0 124 / 10%), transparent 34%),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .future-panel .eyebrow { margin-bottom: 0.8rem; }
+
+    .future-panel h2 {
+      max-width: 20ch;
+      margin-bottom: 1rem !important;
+    }
+
+    .future-intro {
+      max-width: 52rem;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .future-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .future-card {
+      padding: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--bg);
+    }
+
+    .future-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+    }
+
+    .future-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .future-card strong { color: var(--text); }
+
+    .closing-line {
+      margin: 1.3rem 0 0;
+      color: var(--accent);
+      font-weight: 750;
+    }
+
+    footer {
+      padding: 1.5rem 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 700px) {
+      .shell { width: calc(100% - 2rem); }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero { padding-top: 3.5rem; }
+
+      .masthead { padding-bottom: 3.5rem; }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+
+      .team-grid { grid-template-columns: 1fr; }
+
+      .member-card {
+        display: grid;
+        grid-template-columns: 5rem minmax(0, 1fr);
+        column-gap: 1rem;
+        align-items: start;
+      }
+
+      .avatar {
+        grid-row: 1 / span 3;
+        width: 5rem;
+        height: 5rem;
+        margin: 0;
+      }
+
+      .member-card h3 { align-self: end; }
+
+      .study { grid-column: 2; }
+
+      .bio,
+      .hot-take { grid-column: 1 / -1; }
+
+      .bio { margin-bottom: 1rem; }
+
+      .future-grid { grid-template-columns: 1fr; }
+
+      section + section { margin-top: 4rem; }
+
+      main { padding-block: 3rem 4rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell">
+      <div class="topbar">
+        <a class="wordmark" href="#top" aria-label="The Merge Conflicts, home">
+          <span class="mark" aria-hidden="true">{ }</span>
+          <span>AGENTIC SE LAB · TEAM PAGE</span>
+        </a>
+        <nav class="nav-actions" aria-label="Main navigation">
+          <a href="#team">Meet the team</a>
+          <a href="#future-of-se">Our AI outlook</a>
+          <button id="theme-toggle" type="button" aria-label="Switch to night mode">☾</button>
+        </nav>
+      </div>
+
+      <div class="hero" id="top">
+        <p class="eyebrow">Five humans. One shared repository.</p>
+        <h1>The Merge Conflicts</h1>
+        <p class="hero-copy">
+          We’re studying Computer Science at Paderborn University and thinking out loud about
+          software’s next chapter. Our merge strategy is optimism; our backup strategy is version control.
+        </p>
+        <div class="hero-note"><strong>Current status</strong> <span>building, learning, occasionally rebasing</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="team" aria-labelledby="team-heading">
+      <div class="section-heading">
+        <h2 id="team-heading">Meet the team</h2>
+        <p>Five teammates, one M.Sc. cohort, and absolutely no reason to resolve every disagreement with a force push.</p>
+      </div>
+
+      <div class="team-grid">
+        <article class="member-card">
+          <img class="avatar" alt="Avatar of Abu" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='80' fill='%23D8A15B'/%3E%3Ccircle cx='80' cy='80' r='58' fill='%23F8E6C6'/%3E%3Ctext x='80' y='98' text-anchor='middle' font-family='system-ui,sans-serif' font-size='52' font-weight='700' fill='%2373412D'%3EA%3C/text%3E%3C/svg%3E">
+          <h3>Abu</h3>
+          <p class="study">M.Sc. Computer Science · Paderborn University · 2026</p>
+          <p class="bio">Starting a new chapter in Computer Science. Personal interests and fun facts are still to come—we’d rather leave a field blank than let an AI invent a hobby.</p>
+          <div class="hot-take">🔥 Draft hot take: Good software should fail gracefully; bad software should at least fail with a useful error message.</div>
+        </article>
+
+        <article class="member-card">
+          <img class="avatar" alt="Avatar of Ayush" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='80' fill='%238A9C86'/%3E%3Ccircle cx='80' cy='80' r='58' fill='%23E9EFDB'/%3E%3Ctext x='80' y='98' text-anchor='middle' font-family='system-ui,sans-serif' font-size='52' font-weight='700' fill='%23364E40'%3EA%3C/text%3E%3C/svg%3E">
+          <h3>Ayush</h3>
+          <p class="study">M.Sc. Computer Science · Paderborn University · 2026</p>
+          <p class="bio">Joining the M.Sc. Computer Science cohort at Paderborn University. The longer introduction is pending; the compiler has not accepted placeholder biographical data.</p>
+          <div class="hot-take">🔥 Draft hot take: The best AI feature is the one that saves time without adding a new settings page.</div>
+        </article>
+
+        <article class="member-card">
+          <img class="avatar" alt="Avatar of Bhavesh" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='80' fill='%23B46D69'/%3E%3Ccircle cx='80' cy='80' r='58' fill='%23F6DFD5'/%3E%3Ctext x='80' y='98' text-anchor='middle' font-family='system-ui,sans-serif' font-size='52' font-weight='700' fill='%237D343D'%3EB%3C/text%3E%3C/svg%3E">
+          <h3>Bhavesh</h3>
+          <p class="study">M.Sc. CS, UPB · B.E. CS · PG-Diploma, Advanced Computing</p>
+          <p class="bio">Bhavesh studied Computer Science at GH Raisoni Institute of Engineering and Business Management and completed a PG-Diploma in Advanced Computing (C-DAC). Interests: cricket, photography, and experimenting with AI image generation.</p>
+          <div class="hot-take">🔥 Draft hot take: If your AI-generated image has six fingers, call it a usability study for gloves.</div>
+        </article>
+
+        <article class="member-card">
+          <img class="avatar" alt="Avatar of Mahmud" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='80' fill='%237C83B8'/%3E%3Ccircle cx='80' cy='80' r='58' fill='%23E5E4F4'/%3E%3Ctext x='80' y='98' text-anchor='middle' font-family='system-ui,sans-serif' font-size='52' font-weight='700' fill='%233D3C74'%3EM%3C/text%3E%3C/svg%3E">
+          <h3>Mahmud</h3>
+          <p class="study">M.Sc. Computer Science · Paderborn University · 2026</p>
+          <p class="bio">Beginning the M.Sc. Computer Science program at Paderborn University. Personal interests and a fun fact haven’t been shared yet, so this card is resisting the urge to autocomplete a personality.</p>
+          <div class="hot-take">🔥 Draft hot take: “It works on my machine” is not a deployment strategy, even if the machine is very confident.</div>
+        </article>
+
+        <article class="member-card">
+          <img class="avatar" alt="Avatar of Pruthvi" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='80' fill='%23C58F68'/%3E%3Ccircle cx='80' cy='80' r='58' fill='%23F4E5D4'/%3E%3Ctext x='80' y='98' text-anchor='middle' font-family='system-ui,sans-serif' font-size='52' font-weight='700' fill='%23744A35'%3EP%3C/text%3E%3C/svg%3E">
+          <h3>Pruthvi</h3>
+          <p class="study">M.Sc. Computer Science · Paderborn University · 2026</p>
+          <p class="bio">Starting the M.Sc. Computer Science program at Paderborn University. Their own introduction is still in the queue—unlike software, people shouldn’t be generated from defaults.</p>
+          <div class="hot-take">🔥 Draft hot take: A code review comment that asks a good question beats an AI that confidently guesses the answer.</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="future-of-se" aria-labelledby="future-heading">
+      <div class="future-panel">
+        <p class="eyebrow">The team’s shared view</p>
+        <h2 id="future-heading">The Future of Software Engineering</h2>
+        <p class="future-intro">
+          AI is already a useful collaborator: it can help explore unfamiliar code, sketch alternatives,
+          and turn a blank page into a first draft. It is not a substitute for understanding the problem,
+          checking the result, or being accountable when production has feelings about Friday afternoon.
+        </p>
+        <div class="future-grid">
+          <article class="future-card">
+            <h3>Today: faster starts, same responsibility</h3>
+            <p>
+              We expect AI tools to speed up routine work, but generated code still needs tests,
+              context, and a human who can explain why it belongs in the project. “The model said so”
+              is not a test case.
+            </p>
+          </article>
+          <article class="future-card">
+            <h3>In 5–10 years: engineers orchestrate, verify, and design</h3>
+            <p>
+              We think engineers will spend more time expressing intent, connecting systems, reviewing
+              agent work, and making careful trade-offs. The craft will shift—not vanish—and debugging
+              will probably outlive every prediction that debugging is over.
+            </p>
+          </article>
+        </div>
+        <p class="closing-line">Our forecast: more capable tools, more important judgment, and at least one mysterious flaky test.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by an agent, supervised by humans. · 2026 · The Merge Conflicts</p>
+  </footer>
+
+  <script>
+    (() => {
+      const button = document.getElementById("theme-toggle");
+
+      function updateButton(theme) {
+        const isDark = theme === "dark";
+        button.textContent = isDark ? "☀" : "☾";
+        button.setAttribute("aria-label", isDark ? "Switch to day mode" : "Switch to night mode");
+        button.setAttribute("title", isDark ? "Switch to day mode" : "Switch to night mode");
+      }
+
+      updateButton(document.documentElement.getAttribute("data-theme") || "light");
+
+      button.addEventListener("click", () => {
+        const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        updateButton(next);
+        try {
+          localStorage.setItem("upb-theme", next);
+        } catch (_) {}
+      });
+    })();
+  </script>
+</body>
+</html>

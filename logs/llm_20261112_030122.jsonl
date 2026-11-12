@@ -1,0 +1,15 @@
+{"timestamp": "2026-11-12T02:01:22.772347+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.665}
+{"timestamp": "2026-11-12T02:01:25.779246+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 67, "cost_usd": 0.0, "duration_s": 2.895}
+{"timestamp": "2026-11-12T02:01:29.349357+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.179}
+{"timestamp": "2026-11-12T02:01:33.233077+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.169}
+{"timestamp": "2026-11-12T02:01:36.262438+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.133}
+{"timestamp": "2026-11-12T02:01:40.434824+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.173}
+{"timestamp": "2026-11-12T02:01:43.866097+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.193}
+{"timestamp": "2026-11-12T02:02:53.183392+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 63.358}
+{"timestamp": "2026-11-12T02:02:56.455055+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.177}
+{"timestamp": "2026-11-12T02:02:59.251524+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.197}
+{"timestamp": "2026-11-12T02:03:03.188581+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.223}
+{"timestamp": "2026-11-12T02:04:12.951772+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 63.316}
+{"timestamp": "2026-11-12T02:04:22.121757+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.384}
+{"timestamp": "2026-11-12T02:05:33.812013+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 63.278}
+{"timestamp": "2026-11-12T02:07:50.057521+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 14.76}

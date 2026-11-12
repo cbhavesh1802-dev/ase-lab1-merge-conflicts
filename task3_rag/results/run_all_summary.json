@@ -1,0 +1,300 @@
+{
+  "embedding_backend": "gateway:kiconnect.qwen3-embedding-8b",
+  "hybrid_alpha": 0.3,
+  "hybrid_alpha_search": {
+    "0.3": 0.5833333333333334,
+    "0.4": 0.5708333333333333,
+    "0.5": 0.5541666666666667,
+    "0.6": 0.5791666666666667,
+    "0.7": 0.5791666666666667
+  },
+  "cross_encoder_used": false,
+  "chunk_size_variants": [
+    120,
+    200,
+    320
+  ],
+  "k_eval": 5,
+  "configs": [
+    {
+      "name": "r3_recursive_120tok",
+      "summary": {
+        "k": 5,
+        "overall": {
+          "n": 120,
+          "context_recall": 0.5458333333333333,
+          "context_precision": 0.4654166666666667
+        },
+        "per_category": {
+          "identifier": {
+            "n": 30,
+            "context_recall": 0.6,
+            "context_precision": 0.5027777777777778
+          },
+          "multi-hop": {
+            "n": 30,
+            "context_recall": 0.016666666666666666,
+            "context_precision": 0.016666666666666666
+          },
+          "paraphrase": {
+            "n": 30,
+            "context_recall": 0.8666666666666667,
+            "context_precision": 0.7511111111111112
+          },
+          "version": {
+            "n": 30,
+            "context_recall": 0.7,
+            "context_precision": 0.5911111111111111
+          }
+        },
+        "missing_ids": []
+      },
+      "timing": {
+        "mean_latency_ms": 406.92,
+        "p95_latency_ms": 183.59,
+        "mean_context_tokens": 882.2
+      },
+      "index_time_s": 32.9
+    },
+    {
+      "name": "r3_recursive_200tok",
+      "summary": {
+        "k": 5,
+        "overall": {
+          "n": 120,
+          "context_recall": 0.5458333333333333,
+          "context_precision": 0.4677777777777778
+        },
+        "per_category": {
+          "identifier": {
+            "n": 30,
+            "context_recall": 0.6,
+            "context_precision": 0.5027777777777778
+          },
+          "multi-hop": {
+            "n": 30,
+            "context_recall": 0.016666666666666666,
+            "context_precision": 0.016666666666666666
+          },
+          "paraphrase": {
+            "n": 30,
+            "context_recall": 0.8666666666666667,
+            "context_precision": 0.7511111111111112
+          },
+          "version": {
+            "n": 30,
+            "context_recall": 0.7,
+            "context_precision": 0.6005555555555555
+          }
+        },
+        "missing_ids": []
+      },
+      "timing": {
+        "mean_latency_ms": 931.92,
+        "p95_latency_ms": 183.42,
+        "mean_context_tokens": 907.8
+      },
+      "index_time_s": 29.83
+    },
+    {
+      "name": "r3_recursive_320tok",
+      "summary": {
+        "k": 5,
+        "overall": {
+          "n": 120,
+          "context_recall": 0.5458333333333333,
+          "context_precision": 0.47736111111111107
+        },
+        "per_category": {
+          "identifier": {
+            "n": 30,
+            "context_recall": 0.6,
+            "context_precision": 0.5027777777777778
+          },
+          "multi-hop": {
+            "n": 30,
+            "context_recall": 0.016666666666666666,
+            "context_precision": 0.016666666666666666
+          },
+          "paraphrase": {
+            "n": 30,
+            "context_recall": 0.8666666666666667,
+            "context_precision": 0.7511111111111112
+          },
+          "version": {
+            "n": 30,
+            "context_recall": 0.7,
+            "context_precision": 0.6388888888888888
+          }
+        },
+        "missing_ids": []
+      },
+      "timing": {
+        "mean_latency_ms": 399.52,
+        "p95_latency_ms": 279.76,
+        "mean_context_tokens": 923.9
+      },
+      "index_time_s": 20.21
+    },
+    {
+      "name": "r1_bm25",
+      "summary": {
+        "k": 5,
+        "overall": {
+          "n": 120,
+          "context_recall": 0.5916666666666667,
+          "context_precision": 0.5798611111111112
+        },
+        "per_category": {
+          "identifier": {
+            "n": 30,
+            "context_recall": 1.0,
+            "context_precision": 0.7927777777777777
+          },
+          "multi-hop": {
+            "n": 30,
+            "context_recall": 0.43333333333333335,
+            "context_precision": 0.7527777777777779
+          },
+          "paraphrase": {
+            "n": 30,
+            "context_recall": 0.3,
+            "context_precision": 0.14055555555555557
+          },
+          "version": {
+            "n": 30,
+            "context_recall": 0.6333333333333333,
+            "context_precision": 0.6333333333333333
+          }
+        },
+        "missing_ids": []
+      },
+      "timing": {
+        "mean_latency_ms": 3.27,
+        "p95_latency_ms": 5.69,
+        "mean_context_tokens": 927.0
+      },
+      "index_time_s": 0.07
+    },
+    {
+      "name": "r2_fixed",
+      "summary": {
+        "k": 5,
+        "overall": {
+          "n": 120,
+          "context_recall": 0.5458333333333333,
+          "context_precision": 0.4694444444444445
+        },
+        "per_category": {
+          "identifier": {
+            "n": 30,
+            "context_recall": 0.5666666666666667,
+            "context_precision": 0.4844444444444444
+          },
+          "multi-hop": {
+            "n": 30,
+            "context_recall": 0.016666666666666666,
+            "context_precision": 0.006666666666666667
+          },
+          "paraphrase": {
+            "n": 30,
+            "context_recall": 0.9,
+            "context_precision": 0.7538888888888889
+          },
+          "version": {
+            "n": 30,
+            "context_recall": 0.7,
+            "context_precision": 0.6327777777777778
+          }
+        },
+        "missing_ids": []
+      },
+      "timing": {
+        "mean_latency_ms": 1267.1,
+        "p95_latency_ms": 613.27,
+        "mean_context_tokens": 1543.0
+      },
+      "index_time_s": 15.19
+    },
+    {
+      "name": "r4_hybrid",
+      "summary": {
+        "k": 5,
+        "overall": {
+          "n": 120,
+          "context_recall": 0.5833333333333334,
+          "context_precision": 0.5568055555555556
+        },
+        "per_category": {
+          "identifier": {
+            "n": 30,
+            "context_recall": 0.7333333333333333,
+            "context_precision": 0.6555555555555556
+          },
+          "multi-hop": {
+            "n": 30,
+            "context_recall": 0.43333333333333335,
+            "context_precision": 0.6055555555555555
+          },
+          "paraphrase": {
+            "n": 30,
+            "context_recall": 0.5,
+            "context_precision": 0.3244444444444445
+          },
+          "version": {
+            "n": 30,
+            "context_recall": 0.6666666666666666,
+            "context_precision": 0.6416666666666667
+          }
+        },
+        "missing_ids": []
+      },
+      "timing": {
+        "mean_latency_ms": 538.68,
+        "p95_latency_ms": 190.76,
+        "mean_context_tokens": 922.5
+      },
+      "index_time_s": 0.0
+    },
+    {
+      "name": "r5_hybrid_rerank",
+      "summary": {
+        "k": 5,
+        "overall": {
+          "n": 120,
+          "context_recall": 0.5833333333333334,
+          "context_precision": 0.5568055555555556
+        },
+        "per_category": {
+          "identifier": {
+            "n": 30,
+            "context_recall": 0.7333333333333333,
+            "context_precision": 0.6555555555555556
+          },
+          "multi-hop": {
+            "n": 30,
+            "context_recall": 0.43333333333333335,
+            "context_precision": 0.6055555555555555
+          },
+          "paraphrase": {
+            "n": 30,
+            "context_recall": 0.5,
+            "context_precision": 0.3244444444444445
+          },
+          "version": {
+            "n": 30,
+            "context_recall": 0.6666666666666666,
+            "context_precision": 0.6416666666666667
+          }
+        },
+        "missing_ids": []
+      },
+      "timing": {
+        "mean_latency_ms": 588.58,
+        "p95_latency_ms": 250.72,
+        "mean_context_tokens": 922.5
+      },
+      "index_time_s": 0.0
+    }
+  ]
+}

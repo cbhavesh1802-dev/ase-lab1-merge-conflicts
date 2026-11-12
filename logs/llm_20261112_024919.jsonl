@@ -1,0 +1,13 @@
+{"timestamp": "2026-11-12T01:49:20.417185+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.721}
+{"timestamp": "2026-11-12T01:49:23.933229+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 67, "cost_usd": 0.0, "duration_s": 0.956}
+{"timestamp": "2026-11-12T01:49:27.538132+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.175}
+{"timestamp": "2026-11-12T01:49:30.583042+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.144}
+{"timestamp": "2026-11-12T01:49:34.260285+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.204}
+{"timestamp": "2026-11-12T01:49:37.048967+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.221}
+{"timestamp": "2026-11-12T01:49:39.757279+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.182}
+{"timestamp": "2026-11-12T01:49:42.562428+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.155}
+{"timestamp": "2026-11-12T01:49:45.473783+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.181}
+{"timestamp": "2026-11-12T01:49:53.306419+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.331}
+{"timestamp": "2026-11-12T01:50:00.251854+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.338}
+{"timestamp": "2026-11-12T01:50:08.951550+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.415}
+{"timestamp": "2026-11-12T01:51:15.390118+00:00", "type": "embedding", "model": "kiconnect.qwen3-embedding-8b", "n_texts": 1, "cost_usd": 0.0, "duration_s": 0.959}
