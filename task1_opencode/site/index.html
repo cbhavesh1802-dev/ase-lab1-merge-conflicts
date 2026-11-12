@@ -193,7 +193,7 @@
       <div class="nav-links">
         <a href="#team">The humans</a>
         <a href="#manifesto">Our AI stance</a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾ Night shift</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾ Night mode</button>
       </div>
     </nav>
   </header>
@@ -282,7 +282,7 @@
       if (saved === 'dark') root.dataset.theme = 'dark';
       const update = () => {
         const dark = root.dataset.theme === 'dark';
-        button.textContent = dark ? '☀ Daylight mode' : '☾ Night shift';
+        button.textContent = dark ? '☀ Daylight mode' : '☾ Night mode';
         button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
         button.setAttribute('aria-pressed', String(dark));
       };
