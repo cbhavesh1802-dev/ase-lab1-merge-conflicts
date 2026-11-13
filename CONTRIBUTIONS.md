@@ -4,9 +4,9 @@ Fill in per person — short bullet list, specific enough that it's clear who ca
 video (the rubric requires every member to present a part they actually worked on).
 
 - **Bhavesh Chaudhari:** Set up UPB AI Gateway access (VPN, certificate, API key) for the group; ran the live OpenCode session for Task 1 (site build, fixed an image-filename mismatch the agent caught itself); ran Tasks 2-4 against the real gateway; set up and pushed the GitHub repo.
-- **Pruthvi Vishwakarma:** [e.g. Task 2 rag.py chunking + embedding; Task 3 R2/R3 retrievers]
+- **Pruthvi Vishwakarma:** Task 4 - [tools.py + agent.py] Implemented a secure tool registry and function-calling agent loop with input validation, workspace isolation, execution logging, mock-model support, and automated verification of TinyLedger bug fixes. 
 - **Mahmud Iftekhar Asef:** [e.g. Task 1 OpenCode session 3; Task 3 evaluation + failure analysis]
-- **Abu Sayem:** [e.g. Task 4 tools.py + agent.py; video editing]
+- **Abu Sayem:** [e.g. Task 2 rag.py chunking + embedding; Task 3 R2/R3 retrievers]
 - **Ayush Kushwaha:** [e.g. Task 2 agent.py loop + human feedback; Task 3 end-to-end judge run]
 
 ## AI usage statement
