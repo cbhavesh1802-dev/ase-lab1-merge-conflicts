@@ -6,16 +6,16 @@
 M.Sc. Computer Science, Paderborn University (started April 2026).
 
 ## Interests
-<!-- two or three things -->
+Human-computer interaction, software testing, and cloud computing.
 
 ## Fun fact
-<!-- one sentence -->
+Has a Spotify playlist that's been "in progress" for three years.
 
 ## What I think about AI in software engineering today
-<!-- 2–4 sentences. Honest, not marketing. -->
+It's changed how fast you can go from idea to working prototype, but it hasn't changed how much you need to understand your own system — if anything, reviewing AI-written code demands more attention, not less.
 
 ## Where software engineering will be in 5–10 years
-<!-- 2–4 sentences -->
+More of the day-to-day work becomes directing and verifying agents rather than typing code directly, which means code review and testing skills become the actual bottleneck skill to have.
 
 ## My hot take on AI
-<!-- one provocative sentence, max 140 characters -->
+The hardest part of using AI well isn't prompting it — it's knowing when to stop trusting it.
