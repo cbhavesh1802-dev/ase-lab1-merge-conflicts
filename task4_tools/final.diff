@@ -29,7 +29,7 @@ index f3030de..b5c44f6 100644
              balances[expense.payer] += expense.amount_cents
              shares = split_evenly(expense.amount_cents, len(expense.participants))
 diff --git a/src/tinyledger/money.py b/src/tinyledger/money.py
-index a161836..112b184 100644
+index a161836..e03ff5d 100644
 --- a/src/tinyledger/money.py
 +++ b/src/tinyledger/money.py
 @@ -29,13 +29,8 @@ def format_cents(cents: int) -> str:
@@ -48,4 +48,4 @@ index a161836..112b184 100644
 -    share = total_cents // parts
 -    return [share] * parts
 +    share, remainder = divmod(total_cents, parts)
-+    return [share + (index < remainder) for index in range(parts)]
++    return [share + 1] * remainder + [share] * (parts - remainder)
